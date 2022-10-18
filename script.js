@@ -1,9 +1,15 @@
-// let comprimento : number
-// comprimento = 2
-// let largura : number
-// largura = 1
-// function QuebrarBarra(barraUm:number, barraDois:number):number{
-// }
+var comprimento;
+comprimento = 6;
+var largura;
+largura = 2;
+console.log(QuebrarBarra(6, 2));
+function QuebrarBarra(barraUm, barraDois) {
+    if (barraUm == 0 || barraDois == 0) {
+        return -1;
+    }
+    var resultado = (barraUm * barraDois) - 1;
+    return resultado;
+}
 // console.log(AnalizarPalavra("CODigo"))
 // function AnalizarPalavra(palavra:string):string{
 //     let maiuscula : RegExp = /[A-Z]/g
@@ -16,31 +22,33 @@
 //         return palavra.toLowerCase()
 //     }
 // }
-var Lutador = /** @class */ (function () {
-    function Lutador(nome, vida, ataque) {
-        this.Nome = nome;
-        this.Vida = vida;
-        this.Ataque = ataque;
-    }
-    return Lutador;
-}());
-var lutadorUm = new Lutador("Ale", 600, 100);
-var lutadorDois = new Lutador("Fulano", 500, 80);
-console.log(Vencedor(lutadorUm, lutadorDois, lutadorDois));
-function Vencedor(lutadorUm, lutadorDois, lutadorAtaque) {
-    var continuar = true;
-    var vidaLutadorUm = lutadorUm.Vida;
-    var vidaLutadorDois = lutadorDois.Vida;
-    do {
-        vidaLutadorUm = vidaLutadorUm - lutadorAtaque.Ataque;
-        console.log(vidaLutadorUm);
-        if (vidaLutadorUm <= 0) {
-            return lutadorDois.Nome;
-        }
-        vidaLutadorDois = vidaLutadorDois - lutadorUm.Ataque;
-        console.log(vidaLutadorDois);
-        if (vidaLutadorDois <= 0) {
-            return lutadorUm.Nome;
-        }
-    } while (continuar);
-}
+// class Lutador {
+//     Nome: string
+//     Vida: number
+//     Ataque: number
+//     constructor(nome: string, vida: number, ataque: number) {
+//         this.Nome = nome
+//         this.Vida = vida
+//         this.Ataque = ataque
+//     }
+// }
+// let lutadorUm:Lutador = new Lutador("Ale",600,100)
+// let lutadorDois:Lutador = new Lutador("Fulano",500,80)
+// console.log(Vencedor(lutadorUm,lutadorDois,lutadorDois))
+// function Vencedor(lutadorUm:Lutador,lutadorDois:Lutador,lutadorAtaque):string | undefined{
+//    let continuar : boolean = true
+//    let vidaLutadorUm : number = lutadorUm.Vida
+//    let vidaLutadorDois : number = lutadorDois.Vida
+//    do{
+//     vidaLutadorUm = vidaLutadorUm - lutadorAtaque.Ataque
+//     console.log(vidaLutadorUm)
+//     if(vidaLutadorUm <= 0){
+//         return lutadorDois.Nome
+//     }
+//     vidaLutadorDois = vidaLutadorDois - lutadorUm.Ataque
+//     console.log(vidaLutadorDois)
+//     if(vidaLutadorDois <= 0){
+//         return lutadorUm.Nome
+//     }
+//    }while(continuar)
+// }
